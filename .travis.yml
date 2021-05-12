@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t sagar/Docker-React -f Dockerfile.dev .
+  - docker build -t sagar/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true sagar/Docker-React npm run test -- --coverage
+  - docker run -e CI=true sagar/docker-react npm run test -- --coverage
